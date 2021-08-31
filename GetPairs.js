@@ -5,24 +5,25 @@ for(let i = 0;i < 10;i++){
     }
 
     function getParis(arr,sum){
-    arroy.forEach(n => {
-        const pair = arroy.find(m => m.length === 1 && m[0] + n === sum);
+    arr.forEach(n => {
+        const pair = arr.find(m => m.length === 1 && m[0] + n === sum);
         if (pair) {
           pair.push(n);
         } else {
-          arroy.push([n]);
+          arr.push([n]);
         }
       });
       
-      result = arroy.filter(n => n.length === 2);
-      arroy.splice(10,10);   
+     let result = arr.filter(n => n.length === 2);
+      arr.splice(10,10);   
+      let resultobj;
 
       return resultobj ={
         sum:sum,
-        input:arroy,
+        input:arr,
         result:result}
 }    
 
-export default getParis(arr,sum);
+//export default getParis();
 
 console.log(getParis(arroy,sum));
